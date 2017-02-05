@@ -9,4 +9,4 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 "${SCRIPT_DIR}/install-dotfile.sh" .spacemacs
 "${SCRIPT_DIR}/install-dotfile.sh" .emacs.d/private/dacm-keybindings/keybindings.el
 "${SCRIPT_DIR}/install-dotfile.sh" .emacs.d/private/dacm-keybindings/packages.el
-sudo dnf install -y -q emacs
+sudo dnf install -y emacs adobe-source-code-pro-fonts.noarch
