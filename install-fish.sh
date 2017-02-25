@@ -12,4 +12,4 @@ cd ~
 "${SCRIPT_DIR}/install-dotfile.sh" .config/fish/functions/q.fish
 sudo dnf install -y fish
 sudo cp "${SCRIPT_DIR}/system-wide/${LOGIN_FISH}" "${LOGIN_FISH}"
-sudo sed -r "s|^(${USER}:.*:).*$|\1${LOGIN_FISH}|" /etc/passwd
+sudo sed -ri "s|^(${USER}:.*:).*$|\1${LOGIN_FISH}|" /etc/passwd
