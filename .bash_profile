@@ -14,3 +14,5 @@ PKG_CONFIG_PATH=$HOME/.local/lib64/pkgconfig:$HOME/.local/lib/pkgconfig:$PKG_CON
 export PATH
 export INFOPATH
 export PKG_CONFIG_PATH
+
+export EDITOR="vi"
