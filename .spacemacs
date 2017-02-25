@@ -18,7 +18,6 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
-     markdown
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -34,7 +33,7 @@ values."
          go-tab-width 2)
      haskell
      javascript
-     ;; markdown
+     markdown
      ;; org
      (shell :variables
             shell-default-shell 'eshell
