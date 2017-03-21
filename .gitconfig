@@ -1,0 +1,14 @@
+[user]
+	email = 
+	name = Daniel A.C. Martin
+[url "https://"]
+	insteadOf = git://
+[core]
+	editor = vim
+[push]
+	default = simple
+[alias]
+	buttery-biscuit = pull --rebase origin master
+	new-branch = !git checkout master && git pull && git checkout -b
+	nb = new-branch
+	bb = buttery-biscuit
