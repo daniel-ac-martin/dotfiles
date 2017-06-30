@@ -35,6 +35,7 @@ values."
      javascript
      markdown
      ;; org
+     scala
      (shell :variables
             shell-default-shell 'eshell
             ;;shell-default-shell 'ansi-term
