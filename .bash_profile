@@ -7,7 +7,7 @@ fi
 
 # User specific environment and startup programs
 
-PATH=$HOME/.local/bin:$HOME/bin:$PATH:$HOME/.cabal/bin:$HOME/.gopath/bin
+PATH=$HOME/.local/bin:$HOME/bin:$HOME/.cabal/bin:$HOME/.gopath/bin:$PATH
 INFOPATH=$HOME/.local/info:$INFOPATH
 PKG_CONFIG_PATH=$HOME/.local/lib64/pkgconfig:$HOME/.local/lib/pkgconfig:$PKG_CONFIG_PATH
 
