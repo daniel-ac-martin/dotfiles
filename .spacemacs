@@ -27,6 +27,7 @@ values."
      ;; better-defaults
      c-c++
      emacs-lisp
+     floobits
      git
      (go :variables
          go-use-gometalinter t
