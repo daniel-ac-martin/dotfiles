@@ -260,6 +260,11 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (setq display-time-24hr-format t)
+  (setq display-time-day-and-date t)
+  (setq display-time-default-load-average nil)
+  (setq display-time-mail-string "")
+  (display-time-mode 1)
   )
 
 (defun dotspacemacs/user-config ()
