@@ -37,6 +37,7 @@ values."
      javascript
      markdown
      ;; org
+     python
      scala
      (shell :variables
             shell-default-shell 'eshell
