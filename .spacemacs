@@ -38,6 +38,7 @@ values."
      markdown
      ;; org
      python
+     rust
      scala
      (shell :variables
             shell-default-shell 'eshell
