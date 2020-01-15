@@ -10,6 +10,7 @@
 [alias]
 	buttery-biscuit = pull --rebase origin master
 	new-branch = "!f() { name=${1}; git checkout master && git pull && git checkout -b ${name} && git push -u origin ${name}; }; f"
+	remaster = "!git checkout master && git pull"
 	staged = diff --staged
-	nb = !git new-branch
 	bb = !git buttery-biscuit
+	nb = !git new-branch
