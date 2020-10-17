@@ -11,6 +11,8 @@ fi
 # User specific aliases and functions
 alias q=exit
 alias :q=exit
+alias diff='diff -u --color'
+alias grep='grep --color'
 
 export NVM_DIR="/home/dacm/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
