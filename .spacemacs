@@ -32,7 +32,7 @@ values."
      (go :variables
          go-use-gometalinter t
          go-tab-width 2)
-     haskell
+     ;; haskell
      html
      javascript
      markdown
