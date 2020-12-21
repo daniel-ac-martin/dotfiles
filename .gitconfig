@@ -7,6 +7,8 @@
 	editor = vi
 [push]
 	default = simple
+[pull]
+	ff = only
 [alias]
 	buttery-biscuit = pull --rebase origin master
 	new-branch = "!f() { name=${1}; git checkout master && git pull && git checkout -b ${name} && git push -u origin ${name}; }; f"
