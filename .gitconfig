@@ -1,10 +1,13 @@
 [user]
 	email = 
 	name = Daniel A.C. Martin
+	signingkey = 
 [url "https://"]
 	insteadOf = git://
 [core]
 	editor = vim
+[commit]
+	gpgsign = true
 [push]
 	default = simple
 [pull]
