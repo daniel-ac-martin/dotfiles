@@ -35,6 +35,8 @@ values."
      ;; haskell
      html
      javascript
+     lean4
+     lsp
      markdown
      ;; org
      python
@@ -53,6 +55,7 @@ values."
      typescript
      ;; version-control
      yaml
+     zig
      dacm-keybindings
      )
    ;; List of additional packages that will be installed without being
