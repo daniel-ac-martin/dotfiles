@@ -43,17 +43,18 @@ echo '  Done.'
 cd "${swapvol}"
 
 echo 'Creating swapfile...'
-sudo truncate -s 0 "${swapfile}"
-sudo chattr +C "${swapfile}"
-sudo btrfs property set "${swapfile}" compression none
-sudo fallocate -l "${swap_size}" "${swapfile}"
-sudo chmod 600 "${swapfile}"
-sudo mkswap "${swapfile}"
+#sudo truncate -s 0 "${swapfile}"
+#sudo chattr +C "${swapfile}"
+#sudo btrfs property set "${swapfile}" compression none
+#sudo fallocate -l "${swap_size}" "${swapfile}"
+#sudo chmod 600 "${swapfile}"
+#sudo mkswap "${swapfile}"
+sudo btrfs filesystem mkswapfile --size "${swap_size}" --uuid clear "${swapfile}"
 echo '  Done.'
 
 
 echo 'Enabling swapfile...'
-sudo truncate -s 0 "${swapfile}"
+#sudo truncate -s 0 "${swapfile}"
 fstab_entry="${swapvol}/${swapfile}                            none                    swap    defaults                                       0 0"
 sudo swapon "${swapfile}"
 sudo sh -c "echo '${fstab_entry}' >> /etc/fstab"
