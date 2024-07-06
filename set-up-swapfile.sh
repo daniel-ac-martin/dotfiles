@@ -50,6 +50,8 @@ echo 'Creating swapfile...'
 #sudo chmod 600 "${swapfile}"
 #sudo mkswap "${swapfile}"
 sudo btrfs filesystem mkswapfile --size "${swap_size}" --uuid clear "${swapfile}"
+sudo chattr +C "${swapfile}"
+sudo mkswap "${swapfile}"
 echo '  Done.'
 
 
