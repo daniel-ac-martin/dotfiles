@@ -50,8 +50,8 @@ echo 'Creating swapfile...'
 #sudo chmod 600 "${swapfile}"
 #sudo mkswap "${swapfile}"
 sudo btrfs filesystem mkswapfile --size "${swap_size}" --uuid clear "${swapfile}"
-sudo chattr +C "${swapfile}"
-sudo mkswap "${swapfile}"
+sudo semanage fcontext -a -t swapfile_t '/mnt/swap(/.*)?'
+sudo restorecon -RF /mnt/swap
 echo '  Done.'
 
 
@@ -70,7 +70,8 @@ echo '  Done.'
 
 echo 'Configuring GRUB for hibernation...'
 device=$(grep "${swapvol}" /etc/mtab | sed -E 's/^([^[:space:]]+).*$/\1/')
-offset=$(sudo filefrag -e "${swapvol}/${swapfile}" | grep '^\s*0:' | tr -d '.:' | awk '{print $4}')
+#offset=$(sudo filefrag -e "${swapvol}/${swapfile}" | grep '^\s*0:' | tr -d '.:' | awk '{print $4}')
+offset=$(sudo btrfs inspect-internal map-swapfile -r "${swapvol}/${swapfile}")
 grub_line="GRUB_CMDLINE_LINUX_DEFAULT=\"resume=${device} resume_offset=${offset}\""
 sudo sh -c "echo '${grub_line}' >> /etc/default/grub"
 echo '  Done.'
