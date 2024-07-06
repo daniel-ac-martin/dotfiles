@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-stage2='set-up-swapfile-stage3.sh'
+stage3='set-up-swapfile-stage3.sh'
 
 echo 'Placing SELinux into permissive mode.'
 sudo setenforce Permissive
