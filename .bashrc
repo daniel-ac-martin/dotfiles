@@ -25,4 +25,4 @@ export NVM_DIR="/home/dacm/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export GOPATH="${HOME}/.gopath"
-export PYTHONPATH="${HOME}/.local/lib/python3.12/site-packages:${PYTHONPATH}"
+export PYTHONPATH="${HOME}/.local/lib/python3.13/site-packages:${PYTHONPATH}"
